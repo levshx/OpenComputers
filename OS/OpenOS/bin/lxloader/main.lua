@@ -31,6 +31,7 @@ if #args == 0 then
   print("  Author: levshx")
   print("  Created in 2021")
   print("  Motivation learning OC")
+  print("  For list args use `lx help`")
 elseif #args == 1 then
   if args[1] == "help" then
     help()
