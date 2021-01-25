@@ -8,8 +8,8 @@ local lx = require("lx")
 
 -- start
 term.clear()
-lx.loading(5,"START             ")
 lx.logo("center")
+lx.loading(5,"START             ")
 
 -- download app lx.lua
 os.sleep(1)
@@ -38,4 +38,9 @@ lx.loading(65,"GET STANDART APP LIST")
 shell.execute("wget -f URL /etc/lx/MANIFEST")
 os.sleep(2)
 
-
+-- start
+term.clear()
+lx.logo("center")
+lx.loading(100,"Complete")
+os.sleep(2)
+term.clear()
