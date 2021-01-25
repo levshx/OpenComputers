@@ -27,11 +27,14 @@ end
 
 
 if #args == 0 then
-  print("  Software lx loader")
-  print("  Author: levshx")
-  print("  Created in 2021")
-  print("  Motivation learning OC")
-  print("  For list args use `lx help`")
+  print(" ===================")
+  print(" |Software:  lx    |")
+  print(" |Author:    levshx|")
+  print(" |Year:      2021  |")
+  print(" ===================")
+  print("Commands:")
+  help()
+  return
 elseif #args == 1 then
   if args[1] == "help" then
     help()
