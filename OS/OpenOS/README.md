@@ -20,4 +20,5 @@ write in console:
      lx dellib Lib_name      -- remove lib by lib name from computer
      lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
        
-
+### Your repository MANIFEST example
+see [MANIFEST](OS/OpenOS/MANIFEST)
