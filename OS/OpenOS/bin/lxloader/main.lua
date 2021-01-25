@@ -27,9 +27,10 @@ end
 
 
 if #args == 0 then
-  print("  Software LX LOADER")
+  print("  Software lx loader")
   print("  Author: levshx")
-  print("  ")
+  print("  Created in 2021")
+  print("  Motivation learning OC")
 elseif #args == 1 then
   if args[1] == "help" then
     help()
