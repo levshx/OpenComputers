@@ -6,6 +6,7 @@ local inventory = component.inventory_controller
 local AXE_NAME = "ThaumicTinkerer:ichorAxeGem"
 local HOE_NAME = "EMT:ElectricHoeGrowth"
 local SAPLING_NAME = "minecraft:sapling"
+
  
 local function equipItem(name)
     local emptySlot = 0
@@ -109,7 +110,7 @@ local function plantSapling()
     robot.useDown()
     safeMovement(robot.back)
     safeMovement(robot.down)
-    print("=========================")
+    print("========================")
 end
  
 local function growSapling()
