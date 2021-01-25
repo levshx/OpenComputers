@@ -18,6 +18,6 @@ write in console:
      lx libs                 -- listen all installed libs
      lx del App_name         -- remove app by app name from computer
      lx dellib Lib_name      -- remove lib by lib name from computer
-     lx addrep Rep_url       -- add new repository
+     lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
        
 
