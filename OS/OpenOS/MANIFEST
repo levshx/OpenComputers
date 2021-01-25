@@ -1,0 +1,25 @@
+{
+  programs = {
+    [1] = {
+      name = "reactor",      
+      description = "Реакторная прога багоюзим ёпты",
+      files = {
+        [1] = {
+          filename = "reactor.lua"
+          url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/reactor/main.lua"
+        }
+      }
+    }
+  }
+  
+  
+  libraries = {
+    [1] = {
+      name = "lx",
+      description = "библиотека levshx с готовыми решениями",
+      url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/lx.lua"
+    }    
+  }
+  
+  
+}
