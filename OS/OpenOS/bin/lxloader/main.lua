@@ -5,7 +5,7 @@ local internet = require("internet")
 local shell = require("shell")
 
 
-local local args, options = shell.parse(...)
+local args, options = shell.parse(...)
 
 function help()
   local text = [[  lx help                 -- get all commands
