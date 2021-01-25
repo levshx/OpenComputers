@@ -21,4 +21,4 @@ write in console:
      lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
        
 ### Your repository MANIFEST example
-see [MANIFEST](OS/OpenOS/MANIFEST/)
+see [MANIFEST](MANIFEST)
