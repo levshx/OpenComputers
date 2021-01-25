@@ -13,9 +13,9 @@ lx.loading(5,"START             ")
 
 -- download app lx.lua
 os.sleep(1)
-lx.loading(50,"GET APP lx.lua   ")
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/main.lua /usr/bin/lx.lua")
-os.sleep(3)
+lx.loading(50,"GET APP lx.lua   ")
+os.sleep(4)
 
 -- make Dirictory /etc/lx/
 term.clear()
@@ -35,12 +35,13 @@ os.sleep(2)
 term.clear()
 lx.logo("center")
 lx.loading(65,"GET STANDART APP LIST")
-shell.execute("wget -f URL /etc/lx/MANIFEST")
-os.sleep(2)
+shell.execute("lx cache")
+os.sleep(4)
 
 -- start
 term.clear()
 lx.logo("center")
 lx.loading(100,"Complete")
-os.sleep(2)
+os.sleep(3)
 term.clear()
+print("Try: lx help")
