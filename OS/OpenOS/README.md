@@ -26,5 +26,7 @@ write in console:
 see [MANIFEST](MANIFEST)
 
 ### LX repository
+
 list programs [bin](bin/)
+
 list libraries [lib](lib/)
