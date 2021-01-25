@@ -21,14 +21,16 @@ function help()
   lx dellib Lib_name      -- remove lib by lib name from computer
   lx reps                 -- listen all used reps
   lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
-  lx delrep MANIFEST_url  -- add new repository by MANIFEST table URL]]
+  lx delrep               -- remove repository from computer]]
   print(text)  
 end
 
 
-
-
-if #args == 1 then
+if #args == 0 then
+  print("  Software LX LOADER")
+  print("  Author: levshx")
+  print("  ")
+elseif #args == 1 then
   if args[1] == "help" then
     help()
     return
