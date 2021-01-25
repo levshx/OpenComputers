@@ -41,7 +41,10 @@ if #args == 1 then
   elseif args[1] == "libs" then  
     
   elseif args[1] == "reps" then  
-    
+  
+  else
+    print(" Bad arguments, use:")
+    help()
   end
 elseif #args == 2 then  
   
