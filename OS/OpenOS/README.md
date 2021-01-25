@@ -3,7 +3,7 @@
 ### How to install lx loader
 write in console:
 
-     wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/install.lua install.lua && install
+     wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/install.lua lxinstall.lua && lxinstall
      
 ### How to use lx
      
