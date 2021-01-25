@@ -1,4 +1,4 @@
-OpenComputers programms repository
+OpenComputers programs repository
 
 ### OpenOS brench
 see documentation [here](OS/OpenOS/)
