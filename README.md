@@ -1,7 +1,7 @@
 OpenComputers programs repository
 
-### OpenOS brench
+### OpenOS branch
 see documentation [here](OS/OpenOS/)
 
-### MineOS (IgorTimofeev) brench
+### MineOS (IgorTimofeev) branch
 see documentation [here](OS/MineOS/)
