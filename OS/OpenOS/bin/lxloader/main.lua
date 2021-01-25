@@ -46,5 +46,5 @@ if #args == 1 then
 elseif #args == 2 then  
   
 else
-  
+  help()  
 end
