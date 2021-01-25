@@ -19,8 +19,8 @@ lx.loading(5,"START             ")
 -- download app lx.lua
 os.sleep(1)
 fs.makeDirectory("/usr/bin")
-if fs.exists("/usr/usr/lx.lua") then
-  fs.remove("/usr/usr/lx.lua")
+if fs.exists("/usr/bin/lx.lua") then
+  fs.remove("/usr/bin/lx.lua")
 end
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/main.lua /usr/bin/lx.lua")
 lx.loading(50,"GET APP lx.lua   ")
