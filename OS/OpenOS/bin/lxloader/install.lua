@@ -5,14 +5,37 @@ term.clear()
 print("Downlodading library lx.lua")
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/main.lua /usr/lib/lx.lua")
 local lx = require("lx")
+
+-- start
 term.clear()
-lx.loading(5,"START")
+lx.loading(5,"START             ")
 lx.logo("center")
+
+-- download app lx.lua
 os.sleep(1)
-lx.loading(20,"GET APP lx.lua")
+lx.loading(50,"GET APP lx.lua   ")
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/main.lua /usr/bin/lx.lua")
+os.sleep(3)
+
+-- make Dirictory /etc/lx/
 term.clear()
 lx.logo("center")
-lx.loading(20,"MAKE LX DIRICTORIES")
-os.sleep(1)
+lx.loading(55,"MAKE LX DIRICTORIES  ")
 fs.makeDirectory("/etc/lx/")
+os.sleep(1)
+
+-- Download rep CONFIG
+term.clear()
+lx.logo("center")
+lx.loading(75,"GET REPOSITORY CONFIG")
+shell.execute("wget -f URL /etc/lx/rep_list")
+os.sleep(2)
+
+-- Download standart rep MANIFEST
+term.clear()
+lx.logo("center")
+lx.loading(65,"GET STANDART APP LIST")
+shell.execute("wget -f URL /etc/lx/MANIFEST")
+os.sleep(2)
+
+
