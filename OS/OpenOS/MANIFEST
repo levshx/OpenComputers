@@ -20,7 +20,7 @@
     [1] = {
       name = "lx",
       description = "библиотека levshx с готовыми решениями",
-      url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/lx.lua"
+      url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/main.lua"
     }    
   }
   
