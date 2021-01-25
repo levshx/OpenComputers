@@ -1,4 +1,4 @@
-# OpenOS brench
+# OpenOS branch
 
 ### How to install lx loader
 write in console:
