@@ -25,7 +25,7 @@ write in console:
 ### Your rep MANIFEST example
 see [MANIFEST](MANIFEST)
 
-### LX repository
+### Standart lx repository
 
 list programs [bin](bin/)
 
