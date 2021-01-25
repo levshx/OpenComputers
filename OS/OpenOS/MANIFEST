@@ -8,6 +8,9 @@
           filename = "reactor.lua"
           url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/reactor/main.lua"
         }
+      },
+      libraries = {
+        [1] = "lx"
       }
     }
   }
