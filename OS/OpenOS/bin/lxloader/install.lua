@@ -1,8 +1,12 @@
 local shell = require("shell")
 local fs = require("filesystem")
 local term = require("term")
+
 term.clear()
 fs.makeDirectory("/usr/lib")
+if fs.exists("/usr/lib/lx.lua") then
+  fs.remove("/usr/lib/lx.lua")
+end
 print("Downlodading library lx.lua")
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/main.lua /usr/lib/lx.lua")
 local lx = require("lx")
@@ -15,6 +19,9 @@ lx.loading(5,"START             ")
 -- download app lx.lua
 os.sleep(1)
 fs.makeDirectory("/usr/bin")
+if fs.exists("/usr/usr/lx.lua") then
+  fs.remove("/usr/usr/lx.lua")
+end
 shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/main.lua /usr/bin/lx.lua")
 lx.loading(50,"GET APP lx.lua   ")
 os.sleep(4)
