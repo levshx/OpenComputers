@@ -4,6 +4,7 @@
     [1] = {
       name = "reactor",      
       description = "Реакторная прога багоюзим ёпты",
+      build = 1,
       files = {
         [1] = {
           filename = "reactor.lua"
@@ -20,6 +21,7 @@
   libraries = {
     [1] = {
       name = "lx",
+      build = 1,
       description = "библиотека levshx с готовыми решениями",
       url = "https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/lib/lx/main.lua"
     }    
