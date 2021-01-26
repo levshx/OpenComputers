@@ -174,7 +174,7 @@ end
 function lx.playtime(nick) --Плейтайм
   local c = lx.com("playtime " .. nick)
   local _, b = string.find(c, "на сервере ")
-  local text = ""
+  local text = 0
   if b == nil then 
     text = "error"
   elseif string.find(c, "час") then
