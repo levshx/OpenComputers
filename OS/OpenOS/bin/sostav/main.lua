@@ -7,6 +7,10 @@ local gpu = component.gpu
 local unicode = require("unicode")
 local event = require("event")
 
+event.shouldInterrupt = function () -- Пидорасам которые хотят закрыть прогу пизда
+  return false 
+end 
+
 local WIDTH, HEIGHT = 146, 42 --Разрешение моника 146/112 x 42
 
 local PATH = "/usr/sostav"
@@ -49,7 +53,7 @@ local function onClick(_,_, x, y, idTouch, playerName) -- Обработка н�
   end
 end
 
-local function Add(playerName)
+local function addTouch(playerName)
   
   -- Ввод ника
   lx.text((math.modf(WIDTH/2)-25), HEIGHT-6,"&bВведите ник:")
@@ -61,6 +65,19 @@ local function Add(playerName)
   
 end
 
+file = io.open(PATH.."/BD", "r")
+local reads = file:read(9999999)
+if reads ~= nil then
+	admins = serial.unserialize(reads)
+else
+	admins = {}
+end
+file:close()
+
+
+
+
+
 event.listen("touch", onClick)
 
 
@@ -71,7 +88,7 @@ term.clear()
 gpu.setResolution(WIDTH, HEIGHT)
 lx.box()
 
-drawButton("AddButtonObject", 100, 37, 3, 6, 0x00FF00, 0x000000, "+", Add)
+drawButton("AddButtonObject", 100, 37, 3, 6, 0x000000, 0x00FF00, "+", addTouch)
 while true do
   event.pull()
 end
