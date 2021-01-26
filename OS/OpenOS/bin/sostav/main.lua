@@ -11,7 +11,9 @@ local WIDTH, HEIGHT = 146, 42 --Разрешение моника 146/112 x 42
 
 local PATH = "/usr/sostav"
 
-local players = {}
+local players = {
+  
+}
 
 buttons = {}
 
@@ -36,7 +38,7 @@ function drawButton(name,x,y, w, h, bg, fg, text, onBClick)
   gpu.setForeground(oldfg)
 end
 
-local function onClick(_,_, x, y, buttonNumber, playerName) -- buttonNumber стандартная хуита хз нахуя
+local function onClick(_,_, x, y, idTouch, playerName) -- Обработка нажатия всех кнопакав
   gpu.set(9,40, "ПХД ПРОМАЗАЛ: "..playerName.."           ")
   for _, name in pairs(buttons) do
     gpu.set(20,20,"Нажатие по экрану: "..x.." "..name[1].." "..name[3].." ".. y.." "..name[2].." ".. name[4].."       ")
@@ -55,6 +57,7 @@ local function Add(playerName)
   local nick = io.read()
   gpu.set((math.modf(WIDTH/2)-25), HEIGHT-6,"                                                                                        ")
   -- Конец ввода ёпты
+  -- Код с ником ...
   
 end
 
