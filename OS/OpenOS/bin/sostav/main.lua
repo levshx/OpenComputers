@@ -33,7 +33,7 @@ function drawButton(name,x,y, w, h, bg, fg, text, onBClick)
   gpu.setForeground(fg)
   -------
   gpu.fill(x, y, w, h, " ")
-  gpu.set(x,math.max(y,h)/2 - math.min(y, h)/2, text)
+  lx.text(x,math.max(y,h)/2 - math.min(y, h)/2, text)
   gpu.setBackground(oldbg)
   gpu.setForeground(oldfg)
 end
@@ -71,7 +71,7 @@ term.clear()
 gpu.setResolution(WIDTH, HEIGHT)
 lx.box()
 
-drawButton("AddButton", 2, 2, 7, 2, 0x00FF00, 0x000000, "Кнопка", Add)
+drawButton("AddButtonObject", 100, 37, 3, 6, 0x00FF00, 0x000000, "+", Add)
 while true do
   event.pull()
 end
