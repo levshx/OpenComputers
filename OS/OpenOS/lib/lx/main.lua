@@ -160,4 +160,50 @@ function lx.text(x,y,text) --Цветной текст
   end
 end
 
+function lx.checkOP(nick) --Чек на опку
+  local c = lx.com("whois " .. nick)
+  local _, b = string.find(c, "OP:§r ")
+  local text = string.sub(c, b+1, string.find(c, "Режим полета:"))
+  if string.find(text, "§aистина§r") ~= nil then
+    return true
+  else
+    return false
+  end
+end
+
+function lx.playtime(nick) --Плейтайм
+  local c = lx.com("playtime " .. nick)
+  local _, b = string.find(c, "на сервере ")
+  local text = ""
+  if b == nil then 
+    text = "error"
+  elseif string.find(c, "час") then
+    text = string.sub(c, b+1, string.find(c, " час")) .. " ч."
+  else
+    text = string.sub(c, b+1, string.find(c, " минут")) .. " мин."
+  end
+  return text
+end
+
+function lx.checkMute(nick) --Чекнуть висит ли мут
+  local c = lx.com("checkban " .. nick)
+  if string.find(c, "Muted: §aFalse") ~= nil then
+    return false
+  else
+    return true
+  end
+end
+
+function lx.getHostTime(timezone) --Получить текущее реальное время компьютера, хостящего сервер майна
+  timezone = timezone or 2
+  local file = io.open("/HostTime.tmp", "w")
+  file:write("123")
+  file:close()
+  local timeCorrection = timezone * 3600
+  local lastModified = tonumber(string.sub(fs.lastModified("/HostTime.tmp"), 1, -4)) + timeCorrection
+  fs.remove("HostTime.tmp")
+  local year, month, day, hour, minute, second = os.date("%Y", lastModified), os.date("%m", lastModified), os.date("%d", lastModified), os.date("%H", lastModified), os.date("%M", lastModified), os.date("%S", lastModified)
+  return tonumber(day), tonumber(month), tonumber(year), tonumber(hour), tonumber(minute), tonumber(second)
+end
+
 return lx
