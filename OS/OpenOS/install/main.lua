@@ -20,7 +20,7 @@ if fs.exists("/usr/bin/lx.lua") then
   fs.remove("/usr/bin/lx.lua")
 end
 print("GET APP lx.lua   ")
-shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lxloader/main.lua /usr/bin/lx.lua")
+shell.execute("wget -f https://raw.githubusercontent.com/levshx/OpenComputers/main/OS/OpenOS/bin/lx/main.lua /usr/bin/lx.lua")
 os.sleep(4)
 
 -- make Dirictory /etc/lx/
