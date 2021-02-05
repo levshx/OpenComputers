@@ -15,8 +15,6 @@ if not fs.exists("/lib/lx.lua") then
   shell.execute("pastebin get SaGg3cGq /lib/lx.lua")
 end
 
-local lx = require("lx")
-
 term.clear()
 local selectedSideInput
 local inventorySize = 0
