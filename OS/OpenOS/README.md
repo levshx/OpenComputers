@@ -20,7 +20,7 @@ write in console:
      lx dellib Lib_name      -- remove lib by lib name from computer
      lx reps                 -- listen all used reps
      lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
-     lx delrep MANIFEST_url  -- add new repository by MANIFEST table URL
+     lx delrep ID            -- remove repository by MANIFEST table URL
        
 ### Your rep MANIFEST example
 see [MANIFEST](MANIFEST)
