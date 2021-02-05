@@ -9,12 +9,6 @@ local reactor
 local rs
 local t_correction = TIME_ZONE * 3600 
 
---LX Library
-if not fs.exists("/lib/lx.lua") then
-  print("Скачивание lx.lua - графической библиотеки levshx")
-  shell.execute("pastebin get SaGg3cGq /lib/lx.lua")
-end
-
 term.clear()
 local selectedSideInput
 local inventorySize = 0
