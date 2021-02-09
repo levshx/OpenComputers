@@ -1,6 +1,6 @@
 -- lib by levshx
--- web.get(url,headers)  - WEB GET  METHOD 
--- web.post(url,POST_TABLE,headers) - WEB POST METHOD
+-- web.get(url,headers) - WEB METHOD GET (return result)
+-- web.post(url,dataTable,headers) - WEB METHOD POST (return result)
 
 local web = {}
 local internet = require("internet")
