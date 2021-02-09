@@ -8,13 +8,13 @@ write in console:
 ### How to use lx
      
      lx help                 -- get all commands
-     lx cache                -- update cache (manifest program list)
+     lx update               -- update cache (manifest program list)
      lx apps                 -- listen all installed apps
      lx install App_name     -- install app by app name
      lx del App_name         -- remove app by app name from computer
-     lx update App_name      -- update app by app name
-     lx update               -- update all apps
-     lx info App_name        -- get all info by app name
+     lx upgrade App_name     -- update to latest version app by app name
+     lx upgrade              -- update to latest version all apps
+     lx show App_name        -- get all info by app name
      lx libs                 -- listen all installed libs 
      lx getlib Lib_name      -- get lib by lib name         
      lx dellib Lib_name      -- remove lib by lib name from computer
