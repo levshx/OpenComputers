@@ -3,6 +3,32 @@ local component = require("component")
 local fs = require("filesystem")
 local internet = require("internet")
 local shell = require("shell")
+local url = ""                     -- переменная для функции (костыль)
+
+function getError(err)             -- вывод ошибки 
+  print("Fucking error "..err)
+end
+
+local function getNotSecure()      -- функция гет запроса без обработки ошибок
+  --print("getNotSecure("..url..")") -- debug mode
+  local handle = internet.request(url)
+  local result = ""
+  for chunk in handle do 
+    result = result..chunk 
+  end
+  return result
+end
+
+local function get(getURL)          -- функция с обёрткой, под обработку ошибки
+  --print("get("..getURL..")")        -- debug mode
+  url = getURL
+  local status, result = xpcall(getNotSecure,getError)
+  if status then 
+    return result
+  else
+    return nil
+  end
+end
 
 
 local args, options = shell.parse(...)
