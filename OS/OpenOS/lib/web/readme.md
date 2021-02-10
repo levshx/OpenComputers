@@ -1,6 +1,8 @@
 # Web Internet simple library
 
-How to use web
+## How to use web
+
+There is no error handling, otherwise the request returns nil
 
 Example GET method:
 ```lua
