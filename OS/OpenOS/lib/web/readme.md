@@ -1,4 +1,4 @@
-### Web Internet simple library
+# Web Internet simple library
 
 How to use web
 
@@ -13,9 +13,9 @@ Example POST method:
 local web = require("web") -- include lib
 
 local url = "http://testsite.com/api.php"                   -- url of request
-local content = {user="Лохебаный",pass="соси"}              -- POST contnet 
+local content = {["param1"]="test value"}                   -- POST contnet 
 -- local contet = "<xml><count>5</count></xml>"             -- more use table/json(text)/xml(text)/text
-local headers = {}                        -- headers of POST method
+local headers = {["user-agent"]="Wget/OpenComputers"}       -- headers of POST method
 
 local result = web.post(url, content, headers))             -- print Content of GET METHOD
 ```
