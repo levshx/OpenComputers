@@ -13,6 +13,15 @@ web.debug = false  -- DEFAULT DEBUG LOG MODE
 
 ----------------------
 
+function dataClear()             
+  if web.debug then
+    print("lib web.dataClear()")
+  end
+  url = nil
+  postData = {}
+  headers = nil
+end
+
 function webError(err)             
   if web.debug then
     print("lib web.lua Fucking web error: "..err)
@@ -22,7 +31,7 @@ end
 local function getNotSecure()    
   
   if web.debug then
-    print("web.getNotSecure("..url..") -- ") 
+    print("lib web.getNotSecure("..url..") -- ") 
   end
   
   local handle = internet.request(url)
@@ -39,7 +48,7 @@ end
 function web.get(getURL) 
   
   if web.debug then
-    print("web.get("..getURL..")")
+    print("lib web.get("..getURL..")")
   end
   
   url = getURL
