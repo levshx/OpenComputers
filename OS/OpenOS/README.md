@@ -22,7 +22,7 @@ write in console:
      lx addrep MANIFEST_url  -- add new repository by MANIFEST table URL
      lx delrep ID            -- remove repository
        
-### Your rep MANIFEST example
+### Your rep MANIFEST example (JSON)
 see [MANIFEST](MANIFEST)
 
 ### Standart lx repository
