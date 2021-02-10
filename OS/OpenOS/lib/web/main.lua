@@ -58,6 +58,7 @@ function web.get(getURL)
   else
     return nil
   end
+  dataClear()
 end
 
 ----------------------
