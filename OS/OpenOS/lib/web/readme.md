@@ -17,5 +17,5 @@ local content = {["param1"]="test value"}                   -- POST contnet
 -- local contet = "<xml><count>5</count></xml>"             -- more use table/json(text)/xml(text)/text
 local headers = {["user-agent"]="Wget/OpenComputers"}       -- headers of POST method
 
-local result = web.post(url, content, headers))             -- print Content of GET METHOD
+local result = web.post(url, content, headers)             -- print Content of GET METHOD
 ```
