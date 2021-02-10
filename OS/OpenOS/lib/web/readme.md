@@ -1,6 +1,6 @@
 ### Web Internet simple library
 
-How to use it
+How to use web
 
 Example GET method
 ```lua
