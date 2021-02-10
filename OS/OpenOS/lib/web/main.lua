@@ -6,8 +6,9 @@
 local web = {}
 local internet = require("internet")
 local url
-local postData = {}
-local headers 
+local postData
+local headers = {}
+local method
 
 web.debug = false  -- DEFAULT DEBUG LOG MODE
 
@@ -18,8 +19,9 @@ function dataClear()
     print("lib web.dataClear()")
   end
   url = nil
-  postData = {}
-  headers = nil
+  postData = nil
+  headers = {}
+  method = nil
 end
 
 function webError(err)             
@@ -28,13 +30,13 @@ function webError(err)
   end
 end
 
-local function getNotSecure()    
+local function requestNotSecure()    
   
   if web.debug then
     print("lib web.getNotSecure("..url..") -- ") 
   end
   
-  local handle = internet.request(url)
+  local handle = internet.request(url,postData,headers,method)
   local result = ""
   for chunk in handle do 
     result = result..chunk 
@@ -52,7 +54,31 @@ function web.get(getURL)
   end
   
   url = getURL
-  local status, result = xpcall(getNotSecure,webError)
+  method = "GET"
+  local status, result = xpcall(requestNotSecure,webError)
+  if status then 
+    return result
+  else
+    return nil
+  end
+  dataClear()
+end
+
+----------------------
+
+--------[POST]--------
+
+function web.post(postURL, tmpData, tmpHeaders) 
+  
+  if web.debug then
+    print("lib web.post("..postURL..")")
+  end
+  
+  url = postURL
+  postData = tmpData
+  headers = tmpHeaders
+  method = "POST"
+  local status, result = xpcall(requestNotSecure,webError)
   if status then 
     return result
   else
