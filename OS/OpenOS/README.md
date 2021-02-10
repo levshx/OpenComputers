@@ -23,7 +23,7 @@ write in console:
      lx delrep ID            -- remove repository
        
 ### Your rep MANIFEST example (JSON)
-see [MANIFEST](MANIFEST)
+see [MANIFEST](MANIFEST.json)
 
 ### Standart lx repository
 
