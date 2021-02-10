@@ -5,9 +5,11 @@
 local web = {}
 local internet = require("internet")
 local url
+local postData = {}
+local headers 
 
-function getError(err)             
-  print("Fucking web error: "..err)
+function webError(err)             
+  print("lib web.lua Fucking web error: "..err)
 end
                   
 local function getNotSecure()     
@@ -23,7 +25,7 @@ end
 function web.get(getURL)          
   --print("get("..getURL..")")     
   url = getURL
-  local status, result = xpcall(getNotSecure,getError)
+  local status, result = xpcall(getNotSecure,webError)
   if status then 
     return result
   else
