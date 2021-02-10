@@ -1,0 +1,22 @@
+{
+  "applictions": [
+    {
+        "name": "testApp",
+        "description": "testDescription",
+        "url": "http://testurl.lua",
+        "dependencies": [
+          "testLib1",
+          "testLib2",
+          "testLib3"
+        ]
+    }
+  ],
+  
+  "libraries": [
+    {
+      "name": "testLib",
+      "description": "testDescription",
+      "url": "http://testurl.lua",
+    }
+  ]  
+}
