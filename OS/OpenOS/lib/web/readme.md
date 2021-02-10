@@ -2,6 +2,7 @@
 
 ## How to use web
 
+WEB library is a wrapper with error traversal over "internet.lua"
 There is no error handling, otherwise the request returns nil
 
 Example GET method:
