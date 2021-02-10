@@ -9,14 +9,22 @@ local url
 local postData = {}
 local headers 
 
-web.debug = false
+web.debug = false  -- DEFAULT DEBUG LOG MODE
+
+----------------------
 
 function webError(err)             
-  print("lib web.lua Fucking web error: "..err)
+  if web.debug then
+    print("lib web.lua Fucking web error: "..err)
+  end
 end
-                  
-local function getNotSecure()     
-  --print("getNotSecure("..url..")") 
+
+local function getNotSecure()    
+  
+  if web.debug then
+    print("web.getNotSecure("..url..") -- ") 
+  end
+  
   local handle = internet.request(url)
   local result = ""
   for chunk in handle do 
@@ -25,8 +33,15 @@ local function getNotSecure()
   return result
 end
 
-function web.get(getURL)          
-  --print("get("..getURL..")")     
+
+--------[GET]--------
+
+function web.get(getURL) 
+  
+  if web.debug then
+    print("web.get("..getURL..")")
+  end
+  
   url = getURL
   local status, result = xpcall(getNotSecure,webError)
   if status then 
@@ -35,6 +50,8 @@ function web.get(getURL)
     return nil
   end
 end
+
+----------------------
 
 
 return web
