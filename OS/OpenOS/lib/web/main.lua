@@ -26,14 +26,14 @@ end
 
 function webError(err)             
   if web.debug then
-    print("lib web.lua Fucking web error: "..err)
+    print("lib web, error: "..err)
   end
 end
 
 local function requestNotSecure()    
   
   if web.debug then
-    print("lib web.getNotSecure("..url..") -- ") 
+    print("lib web.requestNotSecure("..url..")") 
   end
   
   local handle = internet.request(url,postData,headers,method)
